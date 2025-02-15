@@ -1,0 +1,137 @@
+.header {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 13rem;
+    margin-top: 5rem;
+}
+
+.envelope {
+    margin: 0 auto;
+    width: 30rem;
+    height: 20rem;
+    background-color: #620725;
+    position: relative;
+    z-index: 1;
+}
+
+.arrow-left,
+.arrow-right,
+.arrow-up,
+.arrow-down {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+
+
+.arrow-left {
+    border-top: 10rem solid transparent;
+    border-bottom: 10rem solid transparent;
+    border-right: 15rem solid #910D2B;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.arrow-right {
+    border-top: 10rem solid transparent;
+    border-bottom: 10rem solid transparent;
+    border-left: 15rem solid #910D2B;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+
+.arrow-up {
+    border-left: 15rem solid transparent;
+    border-right: 15rem solid transparent;
+    border-bottom: 10rem solid #910D2B;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Default arrow-down (closed envelope) */
+.arrow-down {
+    border-left: 14.9rem solid transparent;
+    border-right: 14.9rem solid transparent;
+    border-top: 9.9rem solid #910D2B;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: top center; /* Ensures rotation happens from the bottom */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Open envelope effect (flap moves up) */
+.arrow-down.open {
+    transform: translateX(-50%) rotateX(180deg); /* Rotates upwards */
+}
+
+
+
+.heart {
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    background-color: #c65060;
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 2;
+}
+
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    background-color: #c65060;
+    border-radius: 50%;
+}
+
+
+.heart::before {
+    top: -25px; 
+    left: 0;
+}
+
+
+.heart::after {
+    top: 0;
+    left: 25px; 
+}
+
+
+/* Default card (hidden inside the envelope) */
+.cart {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    
+    
+    /* Start hidden inside the envelope */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Initially positioned inside the envelope */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+/* Show the card when the envelope opens */
+.envelope.open .cart {
+    transform: translate(-50%, -150%); /* Moves up above the envelope */
+    opacity: 1;
+}
+
