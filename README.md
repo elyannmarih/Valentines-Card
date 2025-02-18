@@ -33,7 +33,7 @@ The card includes responsive design adjustments for different screen sizes.
 <img src="Img1.png" alt="Valentine's Day Envelope" width="300">
 <img src="Img2.png" alt="Valentine's Day Envelope" width="300">
 
-<p>🚀 <a href="ttps://elyannmarih.github.io/Valentines-Card/">View Live Demo</a></p>
+<p>🚀 <a href="https://elyannmarih.github.io/Valentines-Card/">View Live Demo</a></p>
 
 
 
