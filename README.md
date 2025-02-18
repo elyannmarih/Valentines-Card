@@ -2,7 +2,7 @@
 
 <p>This is a simple Valentine's Day card built using HTML, CSS, and JavaScript. The card features an interactive envelope that opens when clicking on a heart, revealing a customizable message inside.</p>
 
-<h2>Features</h2>h2>
+<h2>Features</h2>
 
 A visually appealing envelope that opens when clicked.
 
